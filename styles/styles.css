@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Monoton&family=Raleway&display=swap');
+.body {
+  user-select: none;
+  font-family: 'Monoton', cursive;
+}
+.btn {
+  all: unset;
+}
+.hdr2 {
+  all: unset;
+}
+.header-game {
+  padding: 5px;
+  margin: 0 auto;
+  max-width: 940px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+}
+.timer-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  color: #0e785ccc;
+  border: 2px solid;
+  border-radius: 5px 5px 5px 30px;
+  cursor: pointer;
+  font-size: 28px;
+}
+.timer-btn:hover {
+  background-color: #0e785ccc;
+  color: white;
+}
+.timer-btn-off {
+  pointer-events: none;
+  opacity: 0.5;
+}
+.timer-btn-again-close {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  color: #cc0e6dcc;
+  border: 2px solid;
+  border-radius: 5px 30px 5px 5px;
+  cursor: pointer;
+  font-size: 28px;
+}
+.timer-btn-again-open {
+  display: flex;
+}
+.timer-btn-again-open:hover {
+  background-color: #cc0e6dcc;
+  color: white;
+}
+.timer-hdr {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #0e785ccc;
+  font-size: 28px;
+}
+.timer-hdr-anim {
+  animation: word 1s ease-in-out infinite alternate;
+}
+@keyframes word {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.3);
+  }
+}
+
+.timer {
+  width: 21%;
+  display: flex;
+  align-items: center;
+  color: #0e785ccc;
+  font-size: 28px;
+}
+.container-cards {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+  background-image: url(../image/card-mask.png);
+  background-size: 185px;
+  background-repeat: no-repeat;
+  border: 2px solid rgb(5, 67, 67);
+  border-radius: 5px 5px 30px 5px;
+  box-sizing: border-box;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  font-size: 0;
+  color: #0e785ccc;
+  font-weight: bold;
+  transform-style: preserve-3d;
+  transition: transform 0.3s;
+  transform: rotateY(180deg);
+  perspective: 1000px;
+  opacity: 1;
+  cursor: pointer;
+}
+.card-open {
+  transform: rotateY(1deg);
+  font-size: 60px;
+  background-color: white;
+  background-image: none;
+}
+.card-close {
+  pointer-events: none;
+  opacity: 0.5;
+  transition: 0.3s;
+}
+.card-win {
+  pointer-events: none;
+  opacity: 0.5;
+  background-color: rgba(22, 210, 223, 0.905);
+  box-shadow: none;
+}
+.card:hover{
+  box-shadow: 4px 3px 4px rgba(23, 146, 140, 0.758);
+  border-color: rgb(20, 93, 68);
+}
